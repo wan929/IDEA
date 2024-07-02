@@ -2,9 +2,8 @@ package Test;
 
 import java.util.ArrayList;
 
-public class Test7 {
+public class Test1 {
     public static void main(String[] args) {
-        System.out.printf("sj");
         ArrayList<User> list = new ArrayList<>();
         User u1 = new User("001", "Tom", "123");
         User u2 = new User("002", "Bob", "231");
@@ -13,7 +12,7 @@ public class Test7 {
         list.add(u2);
         list.add(u3);
 
-        System.out.println(checkUser("004", list));
+        System.out.println(checkUser("003", list));
     }
 
     public static boolean checkUser(String id, ArrayList<User> list){
@@ -22,7 +21,7 @@ public class Test7 {
 
     public static int getIndex(String id, ArrayList<User> list){
         for(int i = 0; i < list.size(); i++){
-            if(list.get(i).getId() == id){
+            if(list.get(i).getId().equals(id)){
                 return i;
             }
         }
